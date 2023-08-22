@@ -23,6 +23,10 @@
   when:
     - ansible_pkg_mgr in [ "apt" ]
   block:
+    - name: Install CA certificates (apt)
+      ansible.builtin.package:
+        name: ca-certificates
+
     - name: Trust GPG key (apt)
       ansible.builtin.apt_key:
         url: "{{ bareos_gpg_key }}"

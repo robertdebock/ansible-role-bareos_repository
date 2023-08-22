@@ -9,10 +9,10 @@
       ansible.builtin.package:
         name: bareos
       notify:
-        - remove bareos
+        - Remove bareos
   
   handlers:
-    - name: remove bareos
+    - name: Remove bareos
       ansible.builtin.package:
         name: bareos
         state: absent

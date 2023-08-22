@@ -1,0 +1,18 @@
+---
+- name: Verify
+  hosts: all
+  become: yes
+  gather_facts: yes
+
+  tasks:
+    - name: Test if the repository can be used
+      ansible.builtin.package:
+        name: bareos
+      notify:
+        - remove bareos
+  
+  handlers:
+    - name: remove bareos
+      ansible.builtin.package:
+        name: bareos
+        state: absent

@@ -4,7 +4,7 @@ Setup the bareos repositories.
 
 |GitHub|GitLab|Quality|Downloads|Version|
 |------|------|-------|---------|-------|
-|[![github](https://github.com/robertdebock/ansible-role-bareos_repository/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-bareos_repository/actions)|[![gitlab](https://gitlab.com/robertdebock-iac/ansible-role-bareos_repository/badges/master/pipeline.svg)](https://gitlab.com/robertdebock-iac/ansible-role-bareos_repository)|[![quality](https://img.shields.io/ansible/quality/)](https://galaxy.ansible.com/robertdebock/bareos_repository)|[![downloads](https://img.shields.io/ansible/role/d/)](https://galaxy.ansible.com/robertdebock/bareos_repository)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-bareos_repository.svg)](https://github.com/robertdebock/ansible-role-bareos_repository/releases/)|
+|[![github](https://github.com/robertdebock/ansible-role-bareos_repository/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-bareos_repository/actions)|[![gitlab](https://gitlab.com/robertdebock-iac/ansible-role-bareos_repository/badges/master/pipeline.svg)](https://gitlab.com/robertdebock-iac/ansible-role-bareos_repository)|[![quality](https://img.shields.io/ansible/quality/63098)](https://galaxy.ansible.com/robertdebock/bareos_repository)|[![downloads](https://img.shields.io/ansible/role/d/63098)](https://galaxy.ansible.com/robertdebock/bareos_repository)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-bareos_repository.svg)](https://github.com/robertdebock/ansible-role-bareos_repository/releases/)|
 
 ## [Example Playbook](#example-playbook)
 

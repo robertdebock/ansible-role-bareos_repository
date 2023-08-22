@@ -2,7 +2,7 @@
 galaxy_info:
   author: robertdebock
   role_name: bareos_repository
-  description: Install and configure bareos_repository on your system.
+  description: Setup the bareos repositories.
   license: Apache-2.0
   company: none
   min_ansible_version: "2.12"

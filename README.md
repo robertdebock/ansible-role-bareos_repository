@@ -1,6 +1,6 @@
 # [bareos_repository](#bareos_repository)
 
-Install and configure bareos_repository on your system.
+Setup the bareos repositories.
 
 |GitHub|GitLab|Quality|Downloads|Version|
 |------|------|-------|---------|-------|

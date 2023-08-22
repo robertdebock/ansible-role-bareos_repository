@@ -37,15 +37,6 @@
       loop_control:
         label: "{{ item.name }}"
 
-    - name: Prevent db installation (deb)
-      ansible.builtin.debconf:
-        name: bareos-database-common
-        question: bareos-database-common/dbconfig-install
-        value: "false"
-        vtype: boolean
-      when:
-        - bareos_role == "dir"
-
 - name: Run tasks on zypper based distributions
   when:
     - ansible_pkg_mgr in [ "zypper" ]

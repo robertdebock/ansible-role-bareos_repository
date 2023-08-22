@@ -9,10 +9,17 @@ argument_specs:
     author: Robert de Bock
     options:
       bareos_type:
-        type: "string"
+        type: "str"
         default: community
         description: "What type of Bareos to install, either 'community' or 'subscription'."
+        choices:
+          - community
+          - subscription
       bareos_release:
-        type: "string"
+        type: "str"
         default: current
         description: "What release to use, either 'current', 'next' or 'release'."
+        choices:
+          - current
+          - next
+          - release

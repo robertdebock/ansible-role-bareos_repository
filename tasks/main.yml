@@ -45,7 +45,7 @@
   when:
     - ansible_pkg_mgr in [ "zypper" ]
   block:
-    - name: Import a key from a url
+    - name: Import gpg key (zypper)
       ansible.builtin.rpm_key:
         key: "{{ bareos_gpg_key }}"
 

@@ -15,8 +15,7 @@ galaxy_info:
         - buster
     - name: EL
       versions:
-        - "8"
-        - "9"
+        - all
     - name: Fedora
       versions:
         - "37"

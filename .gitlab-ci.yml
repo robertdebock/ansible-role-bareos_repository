@@ -19,6 +19,8 @@ molecule:
       - image: "debian"
         tag: "buster"
       - image: "enterpriselinux"
+        tag: "7"
+      - image: "enterpriselinux"
         tag: "8"
       - image: "enterpriselinux"
         tag: "latest"

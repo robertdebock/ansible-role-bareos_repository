@@ -5,7 +5,7 @@
   gather_facts: no
 
   tasks:
-    - name: Test if the repository can be used
+    - name: Test if bareos can be installed
       ansible.builtin.package:
         name: bareos
       notify:

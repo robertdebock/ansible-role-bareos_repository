@@ -4,8 +4,6 @@
   ansible.builtin.assert:
     that:
       - bareos_type is defined
-      - bareos_type is string
-      - bareos_type is not none
       - bareos_type in [ "community", "subscription" ]
     quiet: yes
 
@@ -13,7 +11,5 @@
   ansible.builtin.assert:
     that:
       - bareos_release is defined
-      - bareos_release is string
-      - bareos_release is not none
       - bareos_release in [ "current", "next", "release" ]
     quiet: yes

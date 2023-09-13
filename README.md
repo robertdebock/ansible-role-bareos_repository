@@ -45,10 +45,16 @@ The default values for the variables are set in [`defaults/main.yml`](https://gi
 # defaults file for bareos_repository
 
 # What type of Bareos to install, either "community" or "subscription".
-bareos_type: community
+bareos_repository_type: community
+
+# The subscription username for the repository.
+bareos_repository_username: ""
+
+# The subscription password for the repository.
+bareos_repository_password: ""
 
 # What release to use, either "current", "next" or "release".
-bareos_release: current
+bareos_repository_release: current
 ```
 
 ## [Requirements](#requirements)

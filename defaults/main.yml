@@ -5,10 +5,10 @@
 bareos_repository_type: community
 
 # The subscription username for the repository.
-bareos_repository_username:
+bareos_repository_username: ""
 
 # The subscription password for the repository.
-bareos_repository_password:
+bareos_repository_password: ""
 
 # What release to use, either "current", "next" or "release".
 bareos_repository_release: current

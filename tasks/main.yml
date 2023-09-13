@@ -49,7 +49,7 @@
   block:
     - name: Import gpg key (zypper)
       ansible.builtin.rpm_key:
-        key: "{{ bareos_gpg_key }}"
+        key: "{{ bareos_repository_gpg_key }}"
 
     - name: Add repository (zypper)
       ansible.builtin.zypper_repository:

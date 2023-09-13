@@ -13,7 +13,9 @@
     baseurl: "{{ item.baseurl }}"
     gpgcheck: yes
     gpgkey: "{{ item.gpgkey }}"
-  loop: "{{ bareos_repositories }}"
+    username: "{{ item.username | default(omit) }}"
+    password: "{{ item.password | default(omit) }}"
+  loop: "{{ bareos_repository_list }}"
   loop_control:
     label: "{{ item.name }}"
   when:
@@ -29,7 +31,7 @@
 
     - name: Trust GPG key (apt)
       ansible.builtin.apt_key:
-        url: "{{ bareos_gpg_key }}"
+        url: "{{ bareos_repository_gpg_key }}"
 
     - name: Add repository (apt)
       ansible.builtin.apt_repository:
@@ -37,7 +39,7 @@
         state: present
         filename: "{{ item.name }}"
         update_cache: yes
-      loop: "{{ bareos_repositories }}"
+      loop: "{{ bareos_repository_list }}"
       loop_control:
         label: "{{ item.name }}"
 
@@ -52,7 +54,7 @@
     - name: Add repository (zypper)
       ansible.builtin.zypper_repository:
         name: "{{ item.name }}"
-        repo: "{{ item.zypper_repo }}"
-      loop: "{{ bareos_repositories }}"
+        repo: "{{ item.repo }}"
+      loop: "{{ bareos_repository_list }}"
       loop_control:
         label: "{{ item.name }}"

@@ -15,6 +15,7 @@
     gpgkey: "{{ item.gpgkey }}"
     username: "{{ item.username | default(omit) }}"
     password: "{{ item.password | default(omit) }}"
+  no_log: yes
   loop: "{{ bareos_repository_list }}"
   loop_control:
     label: "{{ item.name }}"
@@ -72,6 +73,7 @@
         gpgkey: "{{ item.gpgkey }}"
         username: "{{ item.username | default(omit) }}"
         password: "{{ item.password | default(omit) }}"
+      no_log: yes
       loop: "{{ bareos_repository_debug_list }}"
       loop_control:
         label: "{{ item.name }}"

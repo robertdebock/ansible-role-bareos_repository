@@ -33,3 +33,10 @@
       - bareos_repository_release is defined
       - bareos_repository_release in [ "current", "next", "release" ]
     quiet: yes
+
+- name: assert | Test if bareos_repository_enable_tracebacks is set correctly
+  ansible.builtin.assert:
+    that:
+      - bareos_repository_enable_tracebacks is defined
+      - bareos_repository_enable_tracebacks is boolean
+    quiet: yes

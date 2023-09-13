@@ -31,3 +31,20 @@ bareos_repository_list:
     repo: "deb {{ bareos_repository_url }} /"
     username: "{{ bareos_repository_username | default(omit) }}"
     password: "{{ bareos_repository_password | default(omit) }}"
+
+# A list of repositories for debug information.
+bareos_repository_debug_list:
+  - name: bareos-debuginfo
+    description: Backup Archiving Recovery - Debuginfo
+    baseurl: "{{ bareos_repository_url }}/debug"
+    gpgkey: "{{ bareos_repository_gpg_key }}"
+    username: "{{ bareos_repository_username | default(omit) }}"
+    password: "{{ bareos_repository_password | default(omit) }}"
+
+# Extra packages are required to debug.
+_bareos_repository_debug_required_packages:
+  default:
+    - procps
+  RedHat:
+    - procps-ng
+bareos_repository_debug_required_packages: "{{ _bareos_repository_debug_required_packages[ansible_os_family] | default(_bareos_repository_debug_required_packages['default']) }}"

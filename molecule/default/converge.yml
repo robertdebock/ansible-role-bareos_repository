@@ -6,3 +6,4 @@
 
   roles:
     - role: ansible-role-bareos_repository
+      bareos_repository_enable_tracebacks: yes

@@ -12,3 +12,6 @@ bareos_repository_password: ""
 
 # What release to use, either "current", "next" or "release".
 bareos_repository_release: current
+
+# You can enable tracebacks for troubleshooting purposes.
+bareos_repository_enable_tracebacks: no

@@ -31,3 +31,7 @@ argument_specs:
           - current
           - next
           - release
+      bareos_repository_enable_tracebacks:
+        type: "bool"
+        default: false
+        description: "You can enable tracebacks for troubleshooting purposes."

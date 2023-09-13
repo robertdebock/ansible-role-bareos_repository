@@ -58,3 +58,33 @@
       loop: "{{ bareos_repository_list }}"
       loop_control:
         label: "{{ item.name }}"
+
+- name: Enable tracebacks
+  when:
+    - bareos_repository_enable_tracebacks
+  block:
+    - name: Add debuginfo repository (rpm)
+      ansible.builtin.yum_repository:
+        name: "{{ item.name }}"
+        description: "{{ item.description }}"
+        baseurl: "{{ item.baseurl }}"
+        gpgcheck: yes
+        gpgkey: "{{ item.gpgkey }}"
+        username: "{{ item.username | default(omit) }}"
+        password: "{{ item.password | default(omit) }}"
+      loop: "{{ bareos_repository_debug_list }}"
+      loop_control:
+        label: "{{ item.name }}"
+      when:
+        - ansible_pkg_mgr in [ "dnf", "yum" ]
+        
+    - name: Install required packages
+      ansible.builtin.package:
+        name: "{{ bareos_repository_debug_required_packages }}"
+
+    - name: Disable ptrace_scope
+      ansible.builtin.sysctl:
+        name: kernel.yama.ptrace_scope
+        value: 0
+        sysctl_set: yes
+      

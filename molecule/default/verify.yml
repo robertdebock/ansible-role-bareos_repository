@@ -2,17 +2,27 @@
 - name: Verify
   hosts: all
   become: yes
-  gather_facts: no
+  gather_facts: yes
+
+  vars:
+    _bareos_repository_verify_packages:
+      default:
+        - bareos
+        - bareos-debuginfo
+      Debian:
+        - bareos
+        - bareos-dbg
+    bareos_repository_verify_packages: "{{ _bareos_repository_verify_packages[ansible_os_family] | default(_bareos_repository_verify_packages['default']) }}"
 
   tasks:
-    - name: Test if bareos can be installed
+    - name: Test if bareos packages can be installed
       ansible.builtin.package:
-        name: bareos
+        name: "{{ bareos_repository_verify_packages }}"
       notify:
-        - Remove bareos
+        - Remove packages
   
   handlers:
-    - name: Remove bareos
+    - name: Remove packages
       ansible.builtin.package:
-        name: bareos
+        name: "{{ bareos_repository_verify_packages }}"
         state: absent

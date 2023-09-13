@@ -77,14 +77,13 @@
         label: "{{ item.name }}"
       when:
         - ansible_pkg_mgr in [ "dnf", "yum" ]
-        
+
     - name: Install required packages
       ansible.builtin.package:
         name: "{{ bareos_repository_debug_required_packages }}"
 
     - name: Disable ptrace_scope
-      ansible.builtin.sysctl:
+      ansible.posix.sysctl:
         name: kernel.yama.ptrace_scope
         value: 0
         sysctl_set: yes
-      

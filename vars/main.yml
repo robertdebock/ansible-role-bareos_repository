@@ -22,13 +22,14 @@ _bareos_repository_gpg_key:
   Debian: "{{ bareos_repository_url }}/bareos-keyring.gpg"
 bareos_repository_gpg_key: "{{ _bareos_repository_gpg_key[ansible_os_family] | default(_bareos_repository_gpg_key['default']) }}"
 
-# A list of repositories. The items in this list contains parameters for both dnf/yum and apt.
+# A list of repositories. The items in this list contains parameters for both dnf/yum, apt and zypperz.
 bareos_repository_list:
   - name: bareos
     description: Backup Archiving Recovery
     baseurl: "{{ bareos_repository_url }}"
     gpgkey: "{{ bareos_repository_gpg_key }}"
-    repo: "deb {{ bareos_repository_url }} /"
+    repo: "{{ bareos_repository_url }}"
+    deb_repo: "deb {{ bareos_repository_url }} /"
     username: "{{ bareos_repository_username | default(omit) }}"
     password: "{{ bareos_repository_password | default(omit) }}"
 
@@ -38,6 +39,7 @@ bareos_repository_debug_list:
     description: Backup Archiving Recovery - Debuginfo
     baseurl: "{{ bareos_repository_url }}/debug"
     gpgkey: "{{ bareos_repository_gpg_key }}"
+    repo: "{{ bareos_repository_url }}/debug"
     username: "{{ bareos_repository_username | default(omit) }}"
     password: "{{ bareos_repository_password | default(omit) }}"
 

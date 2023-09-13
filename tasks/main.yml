@@ -35,7 +35,7 @@
 
     - name: Add repository (apt)
       ansible.builtin.apt_repository:
-        repo: "{{ item.repo }}"
+        repo: "{{ item.deb_repo }}"
         state: present
         filename: "{{ item.name }}"
         update_cache: yes
@@ -77,6 +77,16 @@
         label: "{{ item.name }}"
       when:
         - ansible_pkg_mgr in [ "dnf", "yum" ]
+
+    - name: Add repository (zypper)
+      ansible.builtin.zypper_repository:
+        name: "{{ item.name }}"
+        repo: "{{ item.repo }}"
+      loop: "{{ bareos_repository_debug_list }}"
+      loop_control:
+        label: "{{ item.name }}"
+      when:
+        - ansible_pkg_mgr in [ "zypper" ]
 
     - name: Install required packages
       ansible.builtin.package:

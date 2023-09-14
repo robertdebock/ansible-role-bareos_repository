@@ -39,7 +39,7 @@
         owner: root
         group: root
         mode: "0644"
-      # no_log: yes
+      no_log: yes
 
     - name: Add repository (apt)
       ansible.builtin.apt_repository:

@@ -36,6 +36,9 @@
         dest: /etc/apt/keyrings/bareos.gpg
         username: "{{ bareos_repository_username }}"
         password: "{{ bareos_repository_password }}"
+        owner: root
+        group: root
+        mode: "0644"
       no_log: yes
 
     - name: Add repository (apt)
@@ -58,6 +61,9 @@
         dest: /etc/gnupg/bareos.gpg
         username: "{{ bareos_repository_username }}"
         password: "{{ bareos_repository_password }}"
+        owner: root
+        group: root
+        mode: "0644"
       no_log: yes
 
     - name: Import gpg key (zypper)

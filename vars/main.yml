@@ -29,7 +29,7 @@ bareos_repository_list:
     baseurl: "{{ bareos_repository_url }}"
     gpgkey: "{{ bareos_repository_gpg_key }}"
     repo: "{{ bareos_repository_url }}"
-    deb_repo: "deb {{ bareos_repository_url }} /"
+    deb_repo: "deb [signed-by=/etc/apt/keyrings/bareos.gpg] {{ bareos_repository_url }} /"
     username: "{{ bareos_repository_username | default(omit) }}"
     password: "{{ bareos_repository_password | default(omit) }}"
 

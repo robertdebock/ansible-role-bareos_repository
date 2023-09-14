@@ -33,13 +33,13 @@
     - name: Download gpg key (apt)
       ansible.builtin.get_url:
         url: "{{ bareos_repository_gpg_key }}"
-        dest: /etc/apt/keyrings/bareos.gpg
+        dest: /etc/apt/bareos.gpg
         username: "{{ bareos_repository_username }}"
         password: "{{ bareos_repository_password }}"
         owner: root
         group: root
         mode: "0644"
-      no_log: yes
+      # no_log: yes
 
     - name: Add repository (apt)
       ansible.builtin.apt_repository:

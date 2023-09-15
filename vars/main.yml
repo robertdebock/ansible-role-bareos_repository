@@ -4,7 +4,7 @@
 # The URL differs for community and subscription versions.
 _bareos_repository_base_url:
   community: "https://download.bareos.org"
-  subscription: "https://download.bareos.com"
+  subscription: "https://download.bareos.com/bareos/{{ bareos_repository_version }}"
 bareos_repository_base_url: "{{ _bareos_repository_base_url[bareos_repository_type] }}"
 
 # Different distributions have different repository URLs.

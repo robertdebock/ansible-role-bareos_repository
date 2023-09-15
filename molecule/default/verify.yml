@@ -20,7 +20,7 @@
         name: "{{ bareos_repository_verify_packages }}"
       notify:
         - Remove packages
-  
+
   handlers:
     - name: Remove packages
       ansible.builtin.package:

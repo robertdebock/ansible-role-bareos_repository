@@ -99,7 +99,7 @@
         - bareos_repository_type == "subscription"
 
     - name: Add repository (zypper)
-      ansible.builtin.zypper_repository:
+      community.general.zypper_repository:
         name: "{{ item.name }}"
         repo: "{{ item.repo }}"
       loop: "{{ bareos_repository_list }}"
@@ -127,7 +127,7 @@
         - ansible_pkg_mgr in [ "dnf", "yum" ]
 
     - name: Add repository (zypper)
-      ansible.builtin.zypper_repository:
+      community.general.zypper_repository:
         name: "{{ item.name }}"
         repo: "{{ item.repo }}"
       loop: "{{ bareos_repository_debug_list }}"

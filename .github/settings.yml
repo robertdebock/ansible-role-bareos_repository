@@ -3,6 +3,6 @@
 # Ansible managed
 #
 repository:
-  description: Setup the BareOS repositories.
+  description: Setup the [Bareos](https://www.bareos.com/) repositories.
   homepage: https://robertdebock.nl/
   topics: backup, bareos, infrastructure, linux, storage, system, tools, ansible, molecule, tox, playbook

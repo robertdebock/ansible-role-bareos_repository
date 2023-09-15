@@ -1,6 +1,6 @@
 # [bareos_repository](#bareos_repository)
 
-Setup the BareOS repositories.
+Setup the [Bareos](https://www.bareos.com/) repositories.
 
 |GitHub|GitLab|Quality|Downloads|Version|
 |------|------|-------|---------|-------|

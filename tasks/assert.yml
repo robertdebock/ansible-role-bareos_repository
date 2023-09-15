@@ -39,7 +39,7 @@
   ansible.builtin.assert:
     that:
       - bareos_repository_version is defined
-      - bareos_repository_version is int
+      - bareos_repository_version is number
       - bareos_repository_version in [ 20, 21, 22 ]
     quiet: yes
   when:

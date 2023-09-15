@@ -41,7 +41,7 @@
         mode: "0644"
       no_log: yes
 
-    - name: Place auth.conf.d file (apt)
+    - name: Place credentials file (apt)
       ansible.builtin.copy:
         content: |
           machine download.bareos.com
@@ -84,6 +84,19 @@
     - name: Import gpg key (zypper)
       ansible.builtin.rpm_key:
         key: /etc/gnupg/bareos.gpg
+
+    - name: Place credentials file (zypper)
+      ansible.builtin.copy:
+        content: |
+          username={{ bareos_repository_username }}
+          password={{ bareos_repository_password }}
+        dest: /etc/zypp/credentials.d/bareos
+        owner: root
+        group: root
+        mode: "0600"
+      no_log: yes
+      when:
+        - bareos_repository_type == "subscription"
 
     - name: Add repository (zypper)
       ansible.builtin.zypper_repository:

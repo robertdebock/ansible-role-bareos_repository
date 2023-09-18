@@ -144,5 +144,5 @@
     - name: Disable ptrace_scope
       ansible.posix.sysctl:
         name: kernel.yama.ptrace_scope
-        value: 0
+        value: "0"
         sysctl_set: yes

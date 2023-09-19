@@ -103,6 +103,7 @@
       community.general.zypper_repository:
         name: "{{ item.name }}"
         repo: "{{ item.repo }}"
+        state: present
       loop: "{{ bareos_repository_list }}"
       loop_control:
         label: "{{ item.name }}"
@@ -131,6 +132,7 @@
       community.general.zypper_repository:
         name: "{{ item.name }}"
         repo: "{{ item.repo }}"
+        state: present
       loop: "{{ bareos_repository_debug_list }}"
       loop_control:
         label: "{{ item.name }}"

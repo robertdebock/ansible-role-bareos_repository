@@ -4,7 +4,7 @@ Setup the [Bareos](https://www.bareos.com/) repositories.
 
 |GitHub|GitLab|Quality|Downloads|Version|
 |------|------|-------|---------|-------|
-|[![github](https://github.com/robertdebock/ansible-role-bareos_repository/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-bareos_repository/actions)|[![gitlab](https://gitlab.com/robertdebock-iac/ansible-role-bareos_repository/badges/master/pipeline.svg)](https://gitlab.com/robertdebock-iac/ansible-role-bareos_repository)|[![quality](https://img.shields.io/ansible/quality/32425)](https://galaxy.ansible.com/robertdebock/bareos_repository)|[![downloads](https://img.shields.io/ansible/role/d/32425)](https://galaxy.ansible.com/robertdebock/bareos_repository)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-bareos_repository.svg)](https://github.com/robertdebock/ansible-role-bareos_repository/releases/)|
+|[![github](https://github.com/robertdebock/ansible-role-bareos_repository/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-bareos_repository/actions)|[![gitlab](https://gitlab.com/robertdebock-iac/ansible-role-bareos_repository/badges/master/pipeline.svg)](https://gitlab.com/robertdebock-iac/ansible-role-bareos_repository)|[![downloads](https://img.shields.io/ansible/role/d/32425)](https://galaxy.ansible.com/robertdebock/bareos_repository)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-bareos_repository.svg)](https://github.com/robertdebock/ansible-role-bareos_repository/releases/)|
 
 ## [Example Playbook](#example-playbook)
 
@@ -103,7 +103,7 @@ The minimum version of Ansible required is 2.12, tests have been done to:
 - The current version.
 - The development version.
 
-If you find issues, please register them in [GitHub](https://github.com/robertdebock/ansible-role-bareos_repository/issues)
+If you find issues, please register them in [GitHub](https://github.com/robertdebock/ansible-role-bareos_repository/issues).
 
 ## [License](#license)
 

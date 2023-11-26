@@ -1,4 +1,4 @@
-# Ansible role [bareos_repository](#bareos_repository)
+# [Ansible role bareos_repository](#bareos_repository)
 
 Setup the [Bareos](https://www.bareos.com/) repositories.
 

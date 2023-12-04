@@ -34,7 +34,6 @@
       - bareos_repository_release in [ "current", "next", "release" ]
     quiet: yes
 
-# bareos_repository_version
 - name: assert | Test bareos_repository_version
   ansible.builtin.assert:
     that:

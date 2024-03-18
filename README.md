@@ -14,12 +14,12 @@ This example is taken from [`molecule/default/converge.yml`](https://github.com/
 ---
 - name: Converge
   hosts: all
-  become: yes
-  gather_facts: yes
+  become: true
+  gather_facts: true
 
   roles:
     - role: robertdebock.bareos_repository
-      bareos_repository_enable_tracebacks: yes
+      bareos_repository_enable_tracebacks: true
 ```
 
 The machine needs to be prepared. In CI this is done using [`molecule/default/prepare.yml`](https://github.com/robertdebock/ansible-role-bareos_repository/blob/master/molecule/default/prepare.yml):
@@ -28,8 +28,8 @@ The machine needs to be prepared. In CI this is done using [`molecule/default/pr
 ---
 - name: Prepare
   hosts: all
-  become: yes
-  gather_facts: no
+  become: true
+  gather_facts: false
 
   roles:
     - role: robertdebock.bootstrap
@@ -63,7 +63,7 @@ bareos_repository_release: current
 bareos_repository_version: 23
 
 # You can enable tracebacks for troubleshooting purposes.
-bareos_repository_enable_tracebacks: no
+bareos_repository_enable_tracebacks: false
 ```
 
 ## [Requirements](#requirements)

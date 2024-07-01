@@ -22,9 +22,6 @@ galaxy_info:
       versions:
         - "38"
         - "39"
-    - name: opensuse
-      versions:
-        - all
     - name: Ubuntu
       versions:
         - jammy

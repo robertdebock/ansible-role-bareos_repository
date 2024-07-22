@@ -34,6 +34,9 @@ molecule:
         tag: "39"
         python: ['python:3.8', 'python:3.9', 'python:3.10']
       - image: "ubuntu"
+        tag: "focal"
+        python: ['python:3.8', 'python:3.9', 'python:3.10']
+      - image: "ubuntu"
         tag: "jammy"
         python: ['python:3.8', 'python:3.9', 'python:3.10']
 

@@ -45,6 +45,8 @@ jobs:
           - image: "fedora"
             tag: "39"
           - image: "ubuntu"
+            tag: "focal"
+          - image: "ubuntu"
             tag: "jammy"
     steps:
       - name: checkout
@@ -83,6 +85,8 @@ jobs:
           - image: "fedora"
             tag: "39"
           - image: "ubuntu"
+            tag: "focal"
+          - image: "ubuntu"
             tag: "jammy"
     steps:
       - name: checkout
@@ -120,6 +124,8 @@ jobs:
             tag: "38"
           - image: "fedora"
             tag: "39"
+          - image: "ubuntu"
+            tag: "focal"
           - image: "ubuntu"
             tag: "jammy"
     steps:

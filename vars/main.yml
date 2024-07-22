@@ -57,6 +57,6 @@ _bareos_repository_debug_required_packages:
   RedHat:
     - procps-ng
   Debian:
-    - procps-ng
+    - procps
     - apt-utils
 bareos_repository_debug_required_packages: "{{ _bareos_repository_debug_required_packages[ansible_os_family] | default(_bareos_repository_debug_required_packages['default']) }}"

@@ -8,11 +8,8 @@
     _bareos_repository_verify_packages:
       default:
         - bareos
-        # - bareos-debuginfo
       Debian:
-        # - bareos
         - bareos-common
-        # - bareos-dbg
     bareos_repository_verify_packages: "{{ _bareos_repository_verify_packages[ansible_os_family] | default(_bareos_repository_verify_packages['default']) }}"
 
   tasks:

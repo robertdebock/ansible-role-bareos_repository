@@ -27,9 +27,6 @@ molecule:
       - image: "fedora"
         tag: "40"
         python: ['python:3.9', 'python:3.10', 'python:3.13']
-      - image: "fedora"
-        tag: "latest"
-        python: ['python:3.9', 'python:3.10', 'python:3.13']
       - image: "ubuntu"
         tag: "focal"
         python: ['python:3.9', 'python:3.10', 'python:3.13']

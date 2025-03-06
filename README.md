@@ -18,7 +18,7 @@ This example is taken from [`molecule/default/converge.yml`](https://github.com/
   gather_facts: true
 
   roles:
-    - role: ansible-role-bareos_repository
+    - role: robertdebock.bareos_repository
       bareos_repository_enable_tracebacks: true
 ```
 

@@ -5,4 +5,4 @@
 repository:
   description: Setup the [Bareos](https://www.bareos.com/) repositories.
   homepage: https://robertdebock.nl/
-  topics: backup, bareos, infrastructure, linux, storage, system, tools, ansible, molecule, tox, playbook
+  topics: backup, bareos, infrastructure, linux, storage, system, tools, ansible, molecule, playbook

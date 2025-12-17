@@ -26,8 +26,6 @@ molecule:
       - image: "enterpriselinux"
         tag: "latest"
       - image: "ubuntu"
-        tag: "focal"
-      - image: "ubuntu"
         tag: "jammy"
 
 galaxy:

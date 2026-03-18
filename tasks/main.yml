@@ -21,11 +21,11 @@
   loop_control:
     label: "{{ item.name }}"
   when:
-    - ansible_pkg_mgr in [ "dnf", "yum", "dnf5" ]
+    - ansible_facts['pkg_mgr'] in [ "dnf", "yum", "dnf5" ]
 
 - name: Run tasks on apt based distributions
   when:
-    - ansible_pkg_mgr in [ "apt" ]
+    - ansible_facts['pkg_mgr'] in [ "apt" ]
   block:
     - name: Install CA certificates (apt)
       ansible.builtin.package:
@@ -69,7 +69,7 @@
 
 - name: Run tasks on zypper based distributions
   when:
-    - ansible_pkg_mgr in [ "zypper" ]
+    - ansible_facts['pkg_mgr'] in [ "zypper" ]
   block:
     - name: Download gpg key (zypper)
       ansible.builtin.get_url:
@@ -126,7 +126,7 @@
       loop_control:
         label: "{{ item.name }}"
       when:
-        - ansible_pkg_mgr in [ "dnf", "yum", "dnf5" ]
+        - ansible_facts['pkg_mgr'] in [ "dnf", "yum", "dnf5" ]
 
     - name: Add repository (zypper)
       community.general.zypper_repository:
@@ -137,7 +137,7 @@
       loop_control:
         label: "{{ item.name }}"
       when:
-        - ansible_pkg_mgr in [ "zypper" ]
+        - ansible_facts['pkg_mgr'] in [ "zypper" ]
 
     - name: Install required packages
       ansible.builtin.package:

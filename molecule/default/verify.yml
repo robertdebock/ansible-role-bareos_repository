@@ -10,7 +10,7 @@
         - bareos
       Debian:
         - bareos-common
-    bareos_repository_verify_packages: "{{ _bareos_repository_verify_packages[ansible_os_family] | default(_bareos_repository_verify_packages['default']) }}"
+    bareos_repository_verify_packages: "{{ _bareos_repository_verify_packages[ansible_facts['os_family']] | default(_bareos_repository_verify_packages['default']) }}"
 
   tasks:
     - name: Test if bareos packages can be installed
